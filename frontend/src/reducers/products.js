@@ -7,7 +7,7 @@ import {
 const initialState = {
   loading: false,
   products: [],
-  error: "",
+  error: null,
 };
 
 export const productList = (state = initialState, action) => {
@@ -15,7 +15,7 @@ export const productList = (state = initialState, action) => {
     case PRODUCT_LIST_REQUEST:
       return { ...state, loading: true };
     case PRODUCT_LIST_SUCCESS:
-      return { loading: false, products: action.payload, error: "" };
+      return { loading: false, products: action.payload, error: null };
     case PRODUCT_LIST_FAIL:
       return { ...state, error: action.payload, loading: false };
     default:
