@@ -14,6 +14,8 @@ import Shipping from './pages/Shipping';
 import Payment from './pages/Payment';
 import PlaceOrder from './pages/PlaceOrder';
 import Order from './pages/Order';
+import UserList from './pages/UserList';
+import UserEdit from './pages/UserEdit';
 
 const App = () => {
   return (
@@ -30,6 +32,8 @@ const App = () => {
           <Route path="/profile" component={Profile} />
           <Route path="/product/:id" component={Product} />
           <Route path="/cart/:id?" component={Cart} />
+          <Route path="/admin/userlist" component={UserList} />
+          <Route path="/admin/user/:id/edit" component={UserEdit} />
           <Route path="/" exact component={Home} />
         </Container>
       </main>

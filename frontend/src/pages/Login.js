@@ -23,7 +23,6 @@ const Login = () => {
   let history = useHistory();
   const redirect = location.search ? location.search.split('=')[1] : '/';
 
-
   useEffect(() => {
     if (userInfo) {
       history.push(redirect)
