@@ -14,7 +14,7 @@ import {
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 
-import { productDetails } from "../actions/product";
+import { listProductDetails } from '../actions/product';
 
 import Rating from "../components/Rating";
 
@@ -30,7 +30,7 @@ const Product = () => {
   );
 
   useEffect(() => {
-    dispatch(productDetails(id));
+    dispatch(listProductDetails(id));
   }, [id, dispatch]);
 
   const addToCartHandler = () => {
