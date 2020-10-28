@@ -15,7 +15,9 @@ import {
   orderCreate,
   orderDetails,
   orderPay,
+  orderDeliver,
   orderListMy,
+  orderList
 } from './reducers/order';
 import { cart } from './reducers/cart';
 
@@ -31,7 +33,9 @@ const reducer = combineReducers({
   userUpdateProfile,
   orderCreate,
   orderDetails,
+  orderList,
   orderPay,
+  orderDeliver,
   orderListMy,
   userList,
   userDelete,

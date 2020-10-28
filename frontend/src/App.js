@@ -18,6 +18,7 @@ import UserList from './pages/UserList';
 import UserEdit from './pages/UserEdit';
 import ProductList from './pages/ProductList';
 import ProductEdit from './pages/ProductEdit';
+import OrderList from './pages/OrderList';
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="/cart/:id?" component={Cart} />
           <Route path="/admin/userlist" component={UserList} />
           <Route path="/admin/productlist" component={ProductList} />
+          <Route path="/admin/orderlist" component={OrderList} />
           <Route path="/admin/user/:id/edit" component={UserEdit} />
           <Route path="/admin/product/:id/edit" component={ProductEdit} />
           <Route path="/" exact component={Home} />
