@@ -23,20 +23,19 @@ import {
   PRODUCT_CREATE_REVIEW_RESET,
 } from '../constants/product';
 
-const initialState = {
-  loading: false,
-  products: [],
-  error: null,
-};
-
-export const productList = (state = initialState, action) => {
+export const productList = (state = { products: [] }, action) => {
   switch (action.type) {
     case PRODUCT_LIST_REQUEST:
       return { ...state, loading: true };
     case PRODUCT_LIST_SUCCESS:
-      return { loading: false, products: action.payload, error: null };
+      return {
+        loading: false,
+        products: action.payload.products,
+        pages: action.payload.pages,
+        page: action.payload.page,
+      };
     case PRODUCT_LIST_FAIL:
-      return { ...state, error: action.payload, loading: false };
+      return { error: action.payload, loading: false };
     default:
       return state;
   }
